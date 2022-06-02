@@ -4,7 +4,7 @@ This is a responsive blog post website built with React.js
 
 The website contains many functions that the user can interact with, mainly by posting what he thinks and commenting for others, he can also edit or delete any of them.
 
-generally i used local storage to store and retrieve data to make it easier to save as this project is not connected with any database it initially opens with the default posts being fetched from a json file and then stored in local storage.
+generally I used local storage to store and retrieve data to make it easier to save as this project is not connected with any database it initially opens with the default posts being fetched from a json file and then stored in local storage.
 
 The best test may be in the default posts to remove or edit, there are some glitches working to resolve while deleting a manually created post.
 
