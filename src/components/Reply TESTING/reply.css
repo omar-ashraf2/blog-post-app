@@ -1,0 +1,32 @@
+.reply-to {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+.reply-to .reply-field textarea {
+  resize: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  outline: none;
+  border: 1px solid hsl(238, 30%, 47%);
+}
+.reply-to .reply-field textarea:focus {
+  outline: none;
+  border: 2px solid hsl(238, 40%, 52%);
+  box-shadow: 0 0 8px #a3bfdd;
+}
+.reply-to .reply-btn {
+  margin-top: 10px;
+}
+.reply-to .reply-btn button {
+  background-color: hsl(238, 40%, 52%);
+  padding: 12px 26px;
+  border-radius: 8px;
+  color: white;
+  transition: 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+.reply-to .reply-btn button:hover {
+  background-color: hsla(238, 40%, 52%, 0.521);
+}

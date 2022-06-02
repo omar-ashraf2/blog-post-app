@@ -1,0 +1,35 @@
+.dateSpan {
+  color: #008080;
+  font-weight: bold;
+  font-size: 14px;
+}
+.onUpdate {
+  text-align: left;
+}
+.commentBtns input[type="submit"],
+.commentBtns button {
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+.commentBtns input[type="submit"] {
+  color: #fff;
+  background-color: #273c75;
+}
+.commentBtns button {
+  color: #333;
+  background-color: transparent;
+}
+.cancelWhenEditComment {
+  color: crimson !important;
+  position: absolute;
+  right: 10px;
+  border: 2px solid crimson !important;
+}
+.commentBody {
+  margin: 18px 0;
+}

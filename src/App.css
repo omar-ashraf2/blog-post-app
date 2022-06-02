@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.nav-container {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: sticky;
+  width: 100%;
+  flex-wrap: wrap;
 }
-
-.App-link {
+nav .logo {
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+nav .logo h2 {
+  color: rgb(225, 169, 95);
+}
+nav .logo span {
   color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+nav .nav-links {
+  display: flex;
+  gap: 20px;
+}
+nav .nav-links a {
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(102, 89, 89, 0.925);
+  padding: 10px;
+}
+nav .nav-links a:hover {
+  color: rgb(225, 169, 95);
+}
+@media screen and (max-width: 950px) {
+  nav .logo {
+    font-size: 15px;
   }
-  to {
-    transform: rotate(360deg);
+  nav .nav-links {
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 650px) {
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  nav .nav-links {
+    margin-top: 12px;
   }
 }

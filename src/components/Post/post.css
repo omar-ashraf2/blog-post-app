@@ -1,0 +1,177 @@
+:root {
+  --gradient-color: -webkit-linear-gradient(
+    right bottom,
+    rgba(255, 119, 48, 0.8),
+    rgba(255, 185, 0, 0.8)
+  );
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.postCard {
+  color: #333;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 10px;
+  background-color: #fff;
+  box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.05);
+  margin: 0 15px 25px 15px;
+}
+.imgData {
+  height: 250px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.backgroundImg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.backgroundImg img {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 3s ease-in-out;
+}
+.postCard:hover img {
+  transform: scale(1.3);
+}
+.publicationDetails {
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-color);
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+}
+.authorDetails {
+  display: inline-block;
+  margin-bottom: 5px;
+  transition: all 0.5s;
+}
+.authorDetails:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+.publicationDetails span {
+  display: block;
+}
+.publicationDetails .authorIcon {
+  margin-right: 10px;
+}
+.postData {
+  background-color: #fff;
+  padding: 20px 30px;
+  position: relative;
+}
+.title {
+  font-size: 23px;
+  line-height: 1.4;
+}
+.postData .description {
+  color: #a2a2a2;
+  margin-top: 15px;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.postReadMore {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.postReadMore a {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+}
+.postReadMore a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background: var(--gradient-color);
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.postReadMore a:hover:before {
+  transform: scaleX(1);
+}
+@media screen and (min-width: 1000px) {
+  .postCard {
+    flex-direction: row;
+    max-width: 690px;
+    min-width: 640px;
+  }
+  .imgData {
+    flex-basis: 40%;
+    height: unset;
+  }
+  .imgData img{
+    height: 100%;
+    object-fit: cover;
+  }
+  .publicationDetails {
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+  .postCard:hover .publicationDetails {
+    transform: translateX(0);
+  }
+  .authorDetails {
+    transform: translateY(-30px);
+    opacity: 0;
+    transition-delay: 0.3s;
+  }
+  .publicationDetails span {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all .5s .3s;
+  }
+  .postCard:hover .authorDetails,
+  .postCard:hover .publicationDetails span{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .postData {
+    flex-basis: 60%;
+  }
+  .postData::before {
+      content: '';
+      width: 35px;
+      height: calc(100% + 1px);
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      left: -15px;
+      z-index: 10;
+      transform: skewX(-5deg)
+  }
+}
+@media screen and (max-width: 1000px) {
+  .postData .description::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 20px;
+    height: 110px;
+    background: var(--gradient-color);
+    border-radius: 20px;
+  }
+}

@@ -1,0 +1,103 @@
+:root {
+  --main-color: rgb(225, 169, 95);
+}
+.headerWrapper {
+  height: 100vh;
+}
+.home-landing {
+  height: calc(85vh - 70px);
+  width: 100%;
+  background-image: url(./blog-landing.jpg);
+  background-size: cover;
+  background-position-y: 75%;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.home-landing::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: -1;
+}
+.home-landing h1 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 50px;
+  font-weight: 400;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  max-width: 750px;
+}
+.home-landing h1 span {
+  font-size: 90px;
+  color: var(--main-color);
+}
+.home-landing h1::after {
+  content: "";
+  position: absolute;
+  bottom: -23px;
+  width: 50%;
+  height: 100%;
+  border-bottom: 3px solid white;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.home-landing h1::before {
+  content: "";
+  position: absolute;
+  bottom: -29px;
+  width: 10px;
+  height: 10px;
+  border: 3px solid white;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--main-color);
+  z-index: 1;
+}
+.down-arrow {
+  width: 100%;
+  height: 20vh;
+  text-align: center;
+  margin-top: 30px;
+}
+.down-arrow span {
+  font-size: 70px;
+  color: var(--main-color);
+  cursor: pointer;
+  animation: arrowDown 1s ease-in-out infinite;
+}
+@media screen and (max-width: 950px) {
+  .home-landing h1 {
+    font-size: 30px;
+    max-width: 500px;
+  }
+  .home-landing h1 span {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .home-landing {
+    height: calc(75vh - 70px);
+  }
+}
+@keyframes arrowDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+}

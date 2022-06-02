@@ -1,0 +1,109 @@
+.singlePostContainer {
+  flex: 9;
+  padding: 25px;
+  margin: 50px 20px 15px 40px;
+  text-align: center;
+  width: 100%;
+}
+.singlePostContainer .adjustPost button {
+  cursor: pointer;
+  border: none;
+  font-size: 40px;
+  background-color: transparent;
+}
+.postCover {
+  width: 100%;
+  height: 45rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+.dateTitle {
+  display: flex;
+  font-size: 20px;
+  color: rgba(70, 61, 61, 0.877);
+  justify-content: center;
+  position: relative;
+}
+.dateTitle .postTitle {
+  padding-top: 15px;
+  margin-right: 10%;
+}
+.dateTitle span {
+  font-size: 16px;
+  color: rgba(255, 185, 0, 0.8);
+  font-weight: bold;
+  text-align: left;
+  position: absolute;
+  left: 0;
+  top: 20px;
+}
+.postContent {
+  color: #666;
+  line-height: 1.7;
+  font-size: 18px;
+  padding: 1rem 0;
+  text-align: left;
+}
+.authorInfo img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(27, 26, 26, 0.767);
+  align-items: center;
+}
+.authorInfo,
+.adjustPost {
+  margin-top: 10px;
+}
+.authorInfo {
+  display: flex;
+}
+.authorInfo h4 {
+  margin-left: 10px;
+  color: rgba(255, 185, 0, 0.8);
+}
+.adjustPost button {
+  margin-left: 10px;
+}
+.editBtn {
+  color: rgba(48, 128, 128, 0.822);
+}
+.deleteBtn {
+  color: rgba(207, 7, 47, 0.822);
+}
+.commentBtn {
+  color: rgb(103, 68, 185);
+}
+.postTitleEdit {
+  width: 50vw;
+  font-weight: bold;
+  color: rgba(70, 61, 61, 0.877);
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 0;
+}
+.editPostBody {
+  margin-top: 60px;
+}
+.updateBtnEdit {
+  border: none !important;
+  background-color: rgb(19, 102, 102) !important;
+  padding: 5px !important;
+  color: white;
+  border-radius: 5px;
+  align-self: flex-end;
+  font-size: 20px !important;
+  margin-right: 15px;
+}
+@media screen and (max-width: 970px) {
+  .dateTitle .postTitle{
+    margin: 50px 0 0 0;
+    padding: 0;
+  }
+}

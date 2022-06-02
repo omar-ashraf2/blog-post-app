@@ -1,0 +1,37 @@
+.commentForm {
+  display: flex;
+  flex-direction: column;
+}
+.reply-to .commentField {
+  resize: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  outline: none;
+  border: 1px solid hsl(238, 30%, 47%);
+  width: 100%;
+}
+.reply-to .commentField:focus {
+  outline: none;
+  border: 2px solid hsl(238, 40%, 52%);
+  box-shadow: 0 0 8px #a3bfdd;
+}
+.reply-to .commentBtn {
+  margin-top: 10px;
+}
+.reply-to .commentBtn {
+  background-color: hsl(238, 40%, 52%);
+  padding: 12px 26px;
+  border-radius: 8px;
+  color: white;
+  transition: 0.3s ease;
+  border: none;
+  cursor: pointer;
+  max-width: 40%;
+}
+.reply-to .commentBtn:hover {
+  background-color: hsla(238, 40%, 52%, 0.521);
+}
+.person {
+  font-size: 40px;
+  margin-right: 20px;
+}
